@@ -7,3 +7,5 @@ Atualmente, permite visualizar as respostas ao Impulso e ao Degrau, bem como alg
 Futuramente, posso expandir este projeto para ajudar na visualização do Lugar Geométrico das Raízes, ou auxiliar no estudo dos erros estacionários ou da estabilidade do sistema.
 
 Este projeto ainda não tem muitos tratamentos de erro.
+
+![Demonstração do Projeto](./docs/demonstracao.png)
