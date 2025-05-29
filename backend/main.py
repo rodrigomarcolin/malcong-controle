@@ -64,7 +64,7 @@ def validate_transfer_function(tf_input: TransferFunctionInput):
     tf_input.time_points = max(1, min(tf_input.time_points, 100))  # time_points entre 1 e 100
     tf_input.time_end = max(0.01, min(tf_input.time_end, 5.0))  # time_end entre 0.01 e 5.0
     
-    if len(tf_input.denominator) > len(tf_input.numerator):
+    if len(tf_input.numerator) > len(tf_input.denominator):
         # flopou, não é uma TF própria
         raise ValueError("Denominador deve ter um grau maior que o numerador para que a FT seja própria.")
     
