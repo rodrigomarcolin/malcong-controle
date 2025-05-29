@@ -17,15 +17,15 @@ export interface ResponseData {
 
 
 export interface StepInfo {
-    RiseTime: number;
-    SettlingTime: number;
-    SettlingMin: number;
-    SettlingMax: number;
-    Overshoot: number;
-    Undershoot: number;
-    Peak: number;
-    PeakTime: number;
-    SteadyStateValue: number;
+    RiseTime: number | null;
+    SettlingTime: number | null;
+    SettlingMin: number | null;
+    SettlingMax: number | null;
+    Overshoot: number | null;
+    Undershoot: number | null;
+    Peak: number | null;
+    PeakTime: number | null;
+    SteadyStateValue: number | null;
 }
 
 export interface TransferFunctionResponse {
