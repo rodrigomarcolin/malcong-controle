@@ -160,6 +160,7 @@ export default function Dashboard() {
                     onSubmit={handleTransferFunction}
                     error={error}
                 />
+
                 <ChartCard
                     title="Resposta ao Impulso"
                     data={impulseData}
@@ -199,7 +200,6 @@ export default function Dashboard() {
                     chartOptions={chartOptions}
                 />
             </div>
-
         </div>
     );
 }
