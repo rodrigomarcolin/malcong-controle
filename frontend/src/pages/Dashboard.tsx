@@ -67,7 +67,7 @@ export default function Dashboard() {
 
     const [stepInfo, setStepInfo] = useState<StepInfo | null>(null);
 
-    const API_BASE_URL = 'http://localhost:8000';
+    const API_BASE_URL = 'https://controle.malcong.com.br:';
 
     const formatApiDataForChart = (responseData: ResponseData, color: string): ChartData => {
         return {
