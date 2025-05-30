@@ -18,7 +18,9 @@ export interface ResponseData {
 
 export interface StepInfo {
     RiseTime: number | null;
+    RiseTime_0_to_100: number | null;
     SettlingTime: number | null;
+    SettlingTime5: number | null;
     SettlingMin: number | null;
     SettlingMax: number | null;
     Overshoot: number | null;
@@ -32,9 +34,11 @@ export interface TransferFunctionResponse {
     transfer_function: string;
     step_response: ResponseData;
     impulse_response: ResponseData;
+    ramp_response: ResponseData;
     success: boolean;
     step_info: StepInfo;
     message: string;
+    detail?: string;
 }
 
 // Chart.js data format

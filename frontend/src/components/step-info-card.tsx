@@ -1,16 +1,5 @@
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
-
-export interface StepInfo {
-    RiseTime: number | null;
-    SettlingTime: number | null;
-    SettlingMin: number | null;
-    SettlingMax: number | null;
-    Overshoot: number | null;
-    Undershoot: number | null;
-    Peak: number | null;
-    PeakTime: number | null;
-    SteadyStateValue: number | null;
-}
+import { StepInfo } from "@/types";
 
 interface StepInfoCardProps {
     stepInfo: StepInfo | null;
@@ -46,10 +35,10 @@ export const StepInfoCard = ({ stepInfo }: StepInfoCardProps) => {
             </CardHeader>
             <CardContent>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                    <InfoItem label="Tempo de Subida" value={formatValue(stepInfo.RiseTime, 's')} />
-                    <InfoItem label="Tempo de Acomodação" value={formatValue(stepInfo.SettlingTime, 's')} />
-                    <InfoItem label="Mínimo na Acomodação" value={formatValue(stepInfo.SettlingMin)} />
-                    <InfoItem label="Máximo na Acomodação" value={formatValue(stepInfo.SettlingMax)} />
+                    <InfoItem label="Tempo de Subida (10% a 90%)" value={formatValue(stepInfo.RiseTime, 's')} />
+                    <InfoItem label="Tempo de Subida (0% a 100%)" value={formatValue(stepInfo.RiseTime_0_to_100, 's')} />
+                    <InfoItem label="Tempo de Acomodação (2%)" value={formatValue(stepInfo.SettlingTime, 's')} />
+                    <InfoItem label="Tempo de Acomodação (5%)" value={formatValue(stepInfo.SettlingTime5, 's')} />
                     <InfoItem label="Overshoot" value={formatValue(stepInfo.Overshoot, '%', 2)} />
                     <InfoItem label="Undershoot" value={formatValue(stepInfo.Undershoot, '%', 2)} />
                     <InfoItem label="Valor de Pico" value={formatValue(stepInfo.Peak)} />
